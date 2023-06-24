@@ -215,6 +215,11 @@ pivot_table = data.pivot_table(
     aggfunc='sum'
 )
 
+# Create a Streamlit app
+st.set_page_config(layout="wide")
+st.title('Funding by Year and Sector')
+
+
 # Display the heatmap using Seaborn
 fig, ax = plt.subplots(figsize=(12, 18))
 sns.heatmap(pivot_table, cmap='viridis', ax=ax)
