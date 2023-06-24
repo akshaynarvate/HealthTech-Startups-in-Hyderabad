@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
+import openpyxl
 
 # Read the data from the Excel file
 data = pd.read_excel("HealthTech Hyd.xlsx")
