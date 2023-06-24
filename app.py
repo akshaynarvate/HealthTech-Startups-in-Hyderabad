@@ -207,14 +207,21 @@ st.plotly_chart(fig)
 ## Funding by Year and Sector
 st.subheader('Funding by Year and Sector')
 
-# Displaying the heatmap using Seaborn
-plt.figure(figsize=(12, 18))
-sns.heatmap(pivot_table, cmap='viridis')
+# Pivot table to aggregate funding by year and sector
+pivot_table = data.pivot_table(
+    index='Focus sector',
+    columns='Founding year',
+    values='Funding Received',
+    aggfunc='sum'
+)
+
+# Display the heatmap using Seaborn
+fig, ax = plt.subplots(figsize=(12, 18))
+sns.heatmap(pivot_table, cmap='viridis', ax=ax)
 plt.title('Funding by Year and Sector')
 plt.xlabel('Founding Year')
 plt.ylabel('Focus Sector')
 
-# Displaying the heatmap
-st.pyplot()
-
+# Display the heatmap in the Streamlit app
+st.pyplot(fig)
 
