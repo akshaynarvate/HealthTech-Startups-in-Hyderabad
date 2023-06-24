@@ -1,6 +1,7 @@
 
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import openpyxl
 
@@ -15,8 +16,8 @@ st.subheader('Dataset')
 st.dataframe(data.head())
 
 # Display information about the dataset
-st.subheader('Dataset Information')
-st.text(data.info())
+#st.subheader('Dataset Information')
+#st.text(data.info())
 
 # Number of HealthTech Startups Founded Each Year
 st.subheader('Number of HealthTech Startups Founded Each Year')
