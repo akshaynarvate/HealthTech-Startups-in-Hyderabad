@@ -19,8 +19,8 @@ st.dataframe(data.head())
 # Display information about the dataset
 st.subheader('Dataset Information')
 st.write("Dataset Shape:", data.shape)
-st.write("Number of Rows in the Dataframe", data.shape[0])
-st.write("Number of Columns in the Dataframe", data.shape[1])
+st.write("Number of Rows in the Dataframe:", data.shape[0])
+st.write("Number of Columns in the Dataframe:", data.shape[1])
 
 
 # Number of HealthTech Startups Founded Each Year
